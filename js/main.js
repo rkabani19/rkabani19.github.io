@@ -1,10 +1,12 @@
 $(document).ready(function(){
    // Navbar scroll change
+    $(this).scrollTop(0);
+
    var scroll_start = 0;
    var startchange = $('header');
    var offset = startchange.offset();
 
-   $(document).scroll(function() {
+   $(window).scroll(function() {
       scroll_start = $(this).scrollTop();
       if(scroll_start > offset.top) {
           $('header').css('box-shadow', '0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 40px 0 rgba(0, 0, 0, 0.07)');
@@ -16,7 +18,7 @@ $(document).ready(function(){
    });
 
   //  Animations
-   window.sr = ScrollReveal({ duration: 500 });
+   window.sr = ScrollReveal({ duration: 100 });
    sr.reveal('#about-section');
    sr.reveal('.skills', 50);
    sr.reveal('#experience-section');
@@ -41,7 +43,7 @@ $(document).ready(function(){
   });
 
   //Default active on home
-  $('.intro-section').addClass("active");
+  // $('.intro-section').addClass("active");
 
   //Active navbar
   var aChildren = $("nav li").children();
@@ -68,8 +70,9 @@ $(document).ready(function(){
       }
 
       //Scroll animation
-        $('nav').onePageNav();
+      $('nav').onePageNav();
 
+      //Other nav stuff
       if(windowPos + windowHeight == docHeight) {
           if (!$("nav li:last-child a").hasClass("active")) {
               var navActiveCurrent = $(".active").attr("href");
