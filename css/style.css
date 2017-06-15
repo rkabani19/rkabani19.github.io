@@ -235,7 +235,6 @@ h1 {
   }
 }
 
-
 h2 {
   font-size: 2.5em;
   font-weight: 200;
@@ -522,7 +521,7 @@ a {
   color: white;
 }
 
-/*TIMELINE*/
+/* TIMELINE */
 .timeline {
   line-height: 1.4em;
   list-style: none;
@@ -534,7 +533,7 @@ a {
   line-height: inherit;
 }
 
-/*----- TIMELINE ITEM -----*/
+/* TIMELINE ITEM */
 .timeline-item {
   padding-left: 40px;
   position: relative;
@@ -544,7 +543,7 @@ a {
   padding-bottom: 0;
 }
 
-/*----- TIMELINE INFO -----*/
+/* TIMELINE INFO */
 .timeline-info {
   font-size: 12px;
   font-weight: 700;
@@ -554,7 +553,7 @@ a {
   white-space: nowrap;
 }
 
-/*----- TIMELINE MARKER -----*/
+/* TIMELINE MARKER */
 .timeline-marker {
   position: absolute;
   top: 0;
@@ -594,15 +593,16 @@ a {
   border: 3px solid #FF6B6B;
 }
 
-/*----- TIMELINE CONTENT -----*/
+/* TIMELINE CONTENT */
 .timeline-content {
   padding-bottom: 40px;
 }
+
 .timeline-content p:last-child {
-  margin-bottom: 0;
+  margin: 0 20px 0 20px;
 }
 
-/*----- TIMELINE PERIOD -----*/
+/* TIMELINE PERIOD */
 .period {
   padding: 0;
 }
@@ -635,9 +635,7 @@ a {
   margin: 0;
 }
 
-/*----------------------------------------------
-    MOD: TIMELINE SPLIT
-----------------------------------------------*/
+/* MOD: TIMELINE SPLIT */
 @media (min-width: 768px) {
   .timeline-split .timeline, .timeline-centered .timeline {
     display: table;
@@ -671,9 +669,7 @@ a {
   }
 }
 
-/*----------------------------------------------
-    MOD: TIMELINE CENTERED
-----------------------------------------------*/
+/* MOD: TIMELINE CENTERED */
 @media (min-width: 992px) {
   .timeline-centered,
   .timeline-centered .timeline-item,
@@ -736,9 +732,7 @@ a {
   }
 }
 
-/*----------------------------------------------
-    MOD: MARKER OUTLINE
-----------------------------------------------*/
+/* MOD: MARKER OUTLINE */
 .marker-outline .timeline-marker:before {
   background: transparent;
   border-color: #C26868;
