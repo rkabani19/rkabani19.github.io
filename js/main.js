@@ -1,7 +1,18 @@
 $(document).ready(function(){
-   // Navbar scroll change
-    $(this).scrollTop(0);
+   $(this).scrollTop(0);
 
+   //Scroll animation
+    var headerHeight = $('header').outerHeight();
+
+    $('.scroll').click(function(e) {
+      var linkHref = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(linkHref).offset().top - headerHeight
+      }, 1000);
+      e.preventDefault();
+    });
+
+    //Navbar change on scroll
    var scroll_start = 0;
    var startchange = $('header');
    var offset = startchange.offset();
@@ -18,7 +29,7 @@ $(document).ready(function(){
    });
 
   //  Animations
-   window.sr = ScrollReveal({ duration: 100 });
+   window.sr = ScrollReveal({ duration: 200 });
    sr.reveal('#about-section');
    sr.reveal('.skills', 50);
    sr.reveal('#experience-section');
@@ -42,9 +53,6 @@ $(document).ready(function(){
      });
   });
 
-  //Default active on home
-  // $('.intro-section').addClass("active");
-
   //Active navbar
   var aChildren = $("nav li").children();
   var aArray = [];
@@ -54,34 +62,30 @@ $(document).ready(function(){
       aArray.push(ahref);
   }
   $(window).scroll(function(){
-      var windowPos = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      var docHeight = $(document).height();
+    var windowPos = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var docHeight = $(document).height();
 
-      for (var i=0; i < aArray.length; i++) {
-          var theID = aArray[i];
-          var divPos = $(theID).offset().top -80;
-          var divHeight = $(theID).height();
-          if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
-              $("a[href='" + theID + "']").addClass("active");
-          } else {
+    for (var i=0; i < aArray.length; i++) {
+      var theID = aArray[i];
+      var divPos = $(theID).offset().top -80;
+      var divHeight = $(theID).height();
+      if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+            $("a[href='" + theID + "']").addClass("active");
+        } else {
               $("a[href='" + theID + "']").removeClass("active");
-          }
+        }
       }
-
-      //Scroll animation
-      $('nav').onePageNav();
 
       //Other nav stuff
       if(windowPos + windowHeight == docHeight) {
-          if (!$("nav li:last-child a").hasClass("active")) {
-              var navActiveCurrent = $(".active").attr("href");
-              $("a[href='" + navActiveCurrent + "']").removeClass("active");
-              $("nav li:last-child a").addClass("active");
-          }
+        if (!$("nav li:last-child a").hasClass("active")) {
+          var navActiveCurrent = $(".active").attr("href");
+          $("a[href='" + navActiveCurrent + "']").removeClass("active");
+          $("nav li:last-child a").addClass("active");
+        }
       }
   });
-
 });
 
 
