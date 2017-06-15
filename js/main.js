@@ -33,7 +33,6 @@ $(document).ready(function(){
    sr.reveal('#about-section');
    sr.reveal('.skills', 50);
    sr.reveal('#experience-section');
-   sr.reveal('#resume-section .section-heading', {origin: 'left'});
    sr.reveal('.fa-paper-plane', {origin: 'top'});
 
    var shiftWindow = function() { scrollBy(0, -75) };
