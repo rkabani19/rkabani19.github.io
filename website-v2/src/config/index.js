@@ -21,6 +21,14 @@ module.exports = {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/rohailk/',
     },
+    {
+      name: 'Facebook',
+      url: 'https://www.facebook.com/rohail.kabani/',
+    },
+    {
+      name: 'Email',
+      url: 'mailto:rohail.kabani@gmail.com',
+    },
   ],
 
   nav: [
