@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SocialLine from './social';
 
 const AboutContainer = styled.div`
   background-color: #fed837;
@@ -8,5 +9,6 @@ const AboutContainer = styled.div`
 
 export default () => (
   <AboutContainer>
+    <SocialLine/>
   </AboutContainer>
 )
