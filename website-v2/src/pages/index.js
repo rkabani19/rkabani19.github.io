@@ -1,22 +1,22 @@
 import React from "react"
 import styled from 'styled-components';
-import Layout from "../components/layout"
 import About from "../components/about"
 
 const LeftContainer = styled.div`
-  display: flex;
-  flex: 1;
-  height: 200vh;
+  flex-grow: 1;
+  height: 100vh
 `;
 
 const RightContainer = styled.div`
-  display: flex;
-  flex: 1;
-  height: 200vh;
+  flex-grow: 1;
+  height: 100vh
 `;
 
 const MainContainer = styled.div`
   display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: stretch;
 `;
 
 const IndexPage = () => (
@@ -25,7 +25,6 @@ const IndexPage = () => (
       <About />
     </LeftContainer>    
     <RightContainer>
-      <p>Place Holder</p>
     </RightContainer>
   </MainContainer>
 )
