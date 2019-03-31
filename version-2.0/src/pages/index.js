@@ -1,18 +1,34 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
+import styled from 'styled-components';
+import { About } from "../components";
+
+const LeftContainer = styled.div`
+  flex-grow: 1;
+  height: 100vh
+`;
+
+ const RightContainer = styled.div`
+  flex-grow: 1;
+  height: 100vh
+`;
+
+ const MainContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: stretch;
+`;
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <MainContainer>
+      <LeftContainer>
+        <About/>
+      </LeftContainer>
+      <RightContainer>
+      </RightContainer>
+    </MainContainer>
   </Layout>
 )
 

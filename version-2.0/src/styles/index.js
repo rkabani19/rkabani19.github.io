@@ -1,5 +1,7 @@
 import GlobalStyle from './GlobalStyle'
+import theme from './theme'
 
 export {
-  GlobalStyle
+  GlobalStyle,
+  theme
 }
