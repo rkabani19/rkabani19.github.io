@@ -10,8 +10,28 @@ const {colors} = theme;
   height: 100%;
 `;
 
- export default () => (
-  <AboutContainer>
-    <Social/>
-  </AboutContainer>
-) 
+const Hello = styled.div`
+`;
+
+const Name = styled.div`
+`;
+
+const Subtitle = styled.div`
+`;
+
+const Excerpt = styled.div`
+`;
+
+ export default function About(props) {
+  const data = props.data[0].node;
+
+  return (
+    <AboutContainer>
+      <Hello>{data.frontmatter.title}</Hello>
+      <Name>{data.frontmatter.name}</Name>
+      <Subtitle>{data.frontmatter.subtitle}</Subtitle>
+      {/* <Excerpt>{data.html}</Excerpt> */}
+      <Social/>
+    </AboutContainer>
+  )
+ };
