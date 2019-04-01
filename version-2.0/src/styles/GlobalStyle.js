@@ -1,6 +1,72 @@
 import { createGlobalStyle } from 'styled-components'
+import * as fontFamilies from '../fonts';
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url(${fontFamilies.SofiaProRegularWOFF2}) format('woff2'),
+        url(${fontFamilies.SofiaProRegularWOFF}) format('woff'),
+        url(${fontFamilies.SofiaProRegularTTF}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url(${fontFamilies.SofiaProLightWOFF2}) format('woff2'),
+        url(${fontFamilies.SofiaProLightWOFF}) format('woff'),
+        url(${fontFamilies.SofiaProLightTTF}) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url(${fontFamilies.SofiaProUltraLightWOFF2}) format('woff2'),
+        url(${fontFamilies.SofiaProUltraLightWOFF}) format('woff'),
+        url(${fontFamilies.SofiaProUltraLightTTF}) format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url(${fontFamilies.SofiaProMediumWOFF2}) format('woff2'),
+        url(${fontFamilies.SofiaProMediumWOFF}) format('woff'),
+        url(${fontFamilies.SofiaProMediumTTF}) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url(${fontFamilies.SofiaProBoldWOFF2}) format('woff2'),
+        url(${fontFamilies.SofiaProBoldWOFF}) format('woff'),
+        url(${fontFamilies.SofiaProBoldTTF}) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url(${fontFamilies.SofiaProSemiBoldWOFF2}) format('woff2'),
+        url(${fontFamilies.SofiaProSemiBoldWOFF}) format('woff'),
+        url(${fontFamilies.SofiaProSemiBoldTTF}) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Sofia Pro';
+    src: url(${fontFamilies.SofiaProExtraLightWOFF2}) format('woff2'),
+        url(${fontFamilies.SofiaProExtraLightWOFF}) format('woff'),
+        url(${fontFamilies.SofiaProExtraLightTTF}) format('truetype');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  // --------------------------------------------------------------
+   
   html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
