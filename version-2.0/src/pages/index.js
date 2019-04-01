@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import styled from 'styled-components';
 import { About } from "../components";
+import { graphql } from 'gatsby';
 
 const LeftContainer = styled.div`
   flex-grow: 1;
@@ -20,11 +21,11 @@ const LeftContainer = styled.div`
   align-items: stretch;
 `;
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
     <MainContainer>
       <LeftContainer>
-        <About/>
+        <About data={data.about.edges}/>
       </LeftContainer>
       <RightContainer>
       </RightContainer>
@@ -33,3 +34,20 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query IndexQuery{
+    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+      edges {
+        node {
+          frontmatter {
+            name,
+            title,
+            subtitle
+          }
+          html
+        }
+      }
+    }
+  }
+`;
