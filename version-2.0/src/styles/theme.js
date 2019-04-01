@@ -6,6 +6,10 @@ const theme = {
     brightRed: '#FF3E55',
   },
 
+  fonts: {
+    SofiaPro: 'Sofia Pro, SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, monospace',
+  },
+
   fontSizes: {
     xsmall: '12px',
     smallish: '13px',
