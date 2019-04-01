@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme } from '../styles';
 import Social from './social'
 
-const {colors} = theme;
+const {colors, fonts} = theme;
 
  const AboutContainer = styled.div`
   background-color: ${colors.navy};
