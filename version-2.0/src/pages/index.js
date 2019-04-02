@@ -3,14 +3,17 @@ import Layout from "../components/layout"
 import styled from 'styled-components';
 import { About } from "../components";
 import { graphql } from 'gatsby';
+import { media } from '../styles';
 
 const LeftContainer = styled.div`
-  flex-grow: 1;
+  flex-basis: 50%;
+  flex: 1;
   height: 100vh
 `;
 
  const RightContainer = styled.div`
-  flex-grow: 1;
+  flex-basis: 50%;
+  flex; 1;
   height: 100vh
 `;
 

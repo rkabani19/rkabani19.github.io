@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
+import theme from './theme'
 import * as fontFamilies from '../fonts';
+
+const { colors, fonts, fontSizes } = theme;
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -68,15 +71,21 @@ const GlobalStyle = createGlobalStyle`
   // --------------------------------------------------------------
    
   html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    width: 100%;
   }
+
   body {
     margin: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: ${fonts.SofiaPro};
+    font-size: ${fontSizes.xlarge}
   }
+
   article,
   aside,
   details,
@@ -253,11 +262,6 @@ const GlobalStyle = createGlobalStyle`
     -webkit-appearance: button;
     font: inherit;
   }
-  html {
-    font: 112.5%/1.45em georgia, serif;
-    box-sizing: border-box;
-    overflow-y: scroll;
-  }
   * {
     box-sizing: inherit;
   }
@@ -266,17 +270,6 @@ const GlobalStyle = createGlobalStyle`
   }
   *:after {
     box-sizing: inherit;
-  }
-  body {
-    color: hsla(0, 0%, 0%, 0.8);
-    font-family: georgia, serif;
-    font-weight: normal;
-    word-wrap: break-word;
-    font-kerning: normal;
-    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-    font-feature-settings: "kern", "liga", "clig", "calt";
   }
   img {
     max-width: 100%;
