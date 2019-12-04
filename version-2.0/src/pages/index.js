@@ -1,9 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import styled from 'styled-components';
-import { About } from "../components";
+import { About, Background, Experience } from "../components";
 import { graphql } from 'gatsby';
-import { media } from '../styles';
 
 const LeftContainer = styled.div`
   flex-basis: 50%;
@@ -28,9 +27,11 @@ const IndexPage = ({data}) => (
   <Layout>
     <MainContainer>
       <LeftContainer>
-        <About data={data.about.edges}/>
+        <About data={data.about.edges} />
       </LeftContainer>
       <RightContainer>
+        <Background data={data.background.edges} />
+        <Experience data={data.experience.edges} />
       </RightContainer>
     </MainContainer>
   </Layout>
@@ -46,9 +47,35 @@ export const query = graphql`
           frontmatter {
             name,
             title,
-            subtitle
+            subtitle,
           }
           html
+        }
+      }
+    }
+    background: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/background/" } }) {
+      edges {
+        node {
+          frontmatter {
+            title,
+          }
+          html
+        }
+      }
+    }
+    experience: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/experience/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            company
+            location
+            range
+            url
+          }
         }
       }
     }
