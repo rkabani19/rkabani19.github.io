@@ -43,6 +43,9 @@ const SocialLink = styled.a`
   }
 
   &:hover {
+    &:after {
+      display: none;
+    }
     svg {
       fill: ${colors.brightRed};
       transform: scale(1.2);

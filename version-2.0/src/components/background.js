@@ -31,13 +31,8 @@ const Excerpt = styled.div`
   color: ${colors.darkGrey};
   font-size: ${fontSizes.large};
 
-  a:link {
-    color: ${colors.brightRed};
-    text-decoration: none;
-  }
-
-  a:visited {
-    color: ${colors.brightRed};
+  a {
+    position: relative;
   }
 `;
 

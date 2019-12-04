@@ -31,20 +31,16 @@ const Body = styled.div`
   width: 100%;
   padding-left: 25px;
   color: ${colors.darkGrey};
-
-  a:link {
-    color: ${colors.brightRed};
-    text-decoration: none;
-  }
-
-  a:visited {
-    color: ${colors.brightRed};
-  }
 `;
 
 const Company = styled.div`
   font-size: ${fontSizes.large};
   font-weight: 600;
+
+  a {
+    letter-spacing: 0.07em;
+    position: relative;
+  }
 `;
 
 const JobTitle = styled.div`
