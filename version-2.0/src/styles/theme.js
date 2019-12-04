@@ -4,7 +4,8 @@ const theme = {
     navy: '#011F44',
     bluish: '#003A85',
     brightRed: '#FF3E55',
-    slate: '#96AAC3'
+    slate: '#96AAC3',
+    darkGrey: '#444452',
   },
 
   fonts: {
