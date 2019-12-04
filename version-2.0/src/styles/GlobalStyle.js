@@ -120,10 +120,36 @@ const GlobalStyle = createGlobalStyle`
   a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
+    &:link {
+      color: ${colors.brightRed};
+      text-decoration: none;
+    }
+  
+    &:visited {
+      color: ${colors.brightRed};
+    }
+
+    &:after {  
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      background: ${colors.brightRed};
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
   }
   a:active,
   a:hover {
     outline-width: 0;
+
+    &:after { 
+      width: 100%; 
+      left: 0; 
+    }
   }
   abbr[title] {
     border-bottom: none;
