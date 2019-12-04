@@ -24,7 +24,7 @@ const SocialItemList = styled.ul`
     width: 1px;
     height: 90px;
     margin: 0;
-    background-color: ${colors.bluish};
+    background-color: ${colors.slate};
   }
 `;
 const SocialItem = styled.li`
@@ -37,7 +37,16 @@ const SocialLink = styled.a`
   svg {
     width: 18px;
     height: 18px;
-    fill: ${colors.bluish};
+    fill: ${colors.slate};
+    transition: all 0.3s;
+    transform-origin: 50% 50%;
+  }
+
+  &:hover {
+    svg {
+      fill: ${colors.brightRed};
+      transform: scale(1.2);
+    }
   }
 `;
 

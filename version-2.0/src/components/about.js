@@ -5,7 +5,7 @@ import Social from './social'
 
 const { colors, fonts, fontSizes } = theme;
 
- const AboutContainer = styled.div`
+const AboutContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,12 +20,12 @@ const { colors, fonts, fontSizes } = theme;
 `;
 
 const Hello = styled.div`
-  color: ${colors.whitish};
+  color: ${colors.brightRed};
   font-size: ${fontSizes.medium};
 `;
 
 const Name = styled.div`
-  color: ${colors.brightRed};
+  color: ${colors.whitish};
   line-height: 1.1;
   font-size: 100px;
   ${media.desktop`font-size: 100px;`};
@@ -38,7 +38,7 @@ const Subtitle = styled.div`
   margin-top: 25px;
   line-height: 1.1;
   color: ${colors.slate};
-  font-size: 50px;
+  font-size: 30px;
   ${media.desktop`font-size: 50px;`};
   ${media.tablet`font-size: 40px;`};
   ${media.phablet`font-size: 30px;`};
