@@ -6,35 +6,36 @@ import { graphql } from 'gatsby';
 
 const LeftContainer = styled.div`
   flex-basis: 50%;
-  flex: 1;
-  height: 100vh
 `;
 
  const RightContainer = styled.div`
   flex-basis: 50%;
-  flex; 1;
-  height: 100vh
+  height: 100vh;
+  overflow: auto;
 `;
 
  const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-content: space-between;
   align-items: stretch;
 `;
 
-const IndexPage = ({data}) => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <MainContainer>
-      <LeftContainer>
-        <About data={data.about.edges} />
-      </LeftContainer>
-      <RightContainer>
-        <Background data={data.background.edges} />
-        <Experience data={data.experience.edges} />
-        <Projects data={data.projects.edges}/>
-      </RightContainer>
-    </MainContainer>
+    <div>
+      <MainContainer>
+        <LeftContainer>
+          <About data={data.about.edges} />
+        </LeftContainer>
+        <RightContainer>
+          <Background data={data.background.edges} />
+          <Experience data={data.experience.edges} />
+          <Projects data={data.projects.edges}/>
+        </RightContainer>
+      </MainContainer>
+    </div>
   </Layout>
 )
 

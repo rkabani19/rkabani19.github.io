@@ -34,12 +34,7 @@ const Header = styled.div`
 const Name = styled.div`
   font-size: ${fontSizes.large};
   font-weight: 600;
-  margin-bottom: 10px;
-
-  a {
-    letter-spacing: 0.07em;
-    position: relative;
-  }
+  letter-spacing: 0.07em;
 `;
 
 const Tags = styled.div`
@@ -76,7 +71,7 @@ const Description = styled.div`
 const Row = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 15px;
+  margin-top: 15px;
   margin-bottom: 20px;
 `;
 
@@ -85,7 +80,7 @@ const pulse = keyframes`
 `
 
 const Resume = styled.div`
-  padding-top: 30px;
+  margin: 40px 0;
   position: relative;
 
   &:hover {
