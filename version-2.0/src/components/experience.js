@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { theme, media } from '../styles';
 
 const { colors, fonts, fontSizes } = theme;
@@ -59,6 +59,29 @@ const Row = styled.div`
   padding-top: 15px;
 `;
 
+const pulse = keyframes`
+  50%  {transform: scale(0.8);}
+`
+
+const Resume = styled.div`
+  padding-top: 30px;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    &:after {
+      transition: all .2s ease-in-out;
+      animation: ${pulse} 0.7s ease-in infinite;
+    }
+  }
+
+  &:after {
+    display: inline-block;
+    padding-left: 10px;
+    content: '👉';
+  }
+`;
+
  export default function Experience({ data }) {
 
   return (
@@ -77,6 +100,7 @@ const Row = styled.div`
             </Row>
           )
         })}
+        <Resume onClick={()=> window.open("/resume.pdf")}>View my resume</Resume>
       </Body>
     </ExperienceContainer>
   )
