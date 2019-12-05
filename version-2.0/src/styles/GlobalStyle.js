@@ -74,7 +74,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     width: 100%;
   }
-
+  
   body {
     margin: 0;
     width: 100%;
