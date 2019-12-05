@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import styled from 'styled-components';
-import { About, Background, Experience } from "../components";
+import { About, Background, Experience, Projects } from "../components";
 import { graphql } from 'gatsby';
 
 const LeftContainer = styled.div`
@@ -32,6 +32,7 @@ const IndexPage = ({data}) => (
       <RightContainer>
         <Background data={data.background.edges} />
         <Experience data={data.experience.edges} />
+        <Projects data={data.projects.edges}/>
       </RightContainer>
     </MainContainer>
   </Layout>
@@ -76,6 +77,20 @@ export const query = graphql`
             range
             url
           }
+        }
+      }
+    }
+    projects: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/projects/" } }
+      sort: { fields: [frontmatter___order], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            tech
+          }
+          html
         }
       }
     }
