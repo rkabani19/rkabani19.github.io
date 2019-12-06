@@ -108,6 +108,7 @@ export const query = graphql`
           frontmatter {
             title
             tech
+            link
           }
           html
         }
@@ -116,6 +117,7 @@ export const query = graphql`
   }
 `;
 
-// TODO: make titles on projects links
 // TODO: customize 404 page
 // TODO: update background description
+// TODO: add resume
+// TODO: update metadata

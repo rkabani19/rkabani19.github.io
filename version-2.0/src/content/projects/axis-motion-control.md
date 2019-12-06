@@ -1,6 +1,7 @@
 ---
 order: 3
 title: 'XY Axis Motion Control'
+link: 'https://github.com/rkabani19/xy-axis-motion-control'
 tech:
   - C++
   - Hardware

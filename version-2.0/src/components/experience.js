@@ -2,7 +2,7 @@ import React from 'react';
 import styled, {keyframes} from 'styled-components';
 import { theme, media } from '../styles';
 
-const { colors, fonts, fontSizes } = theme;
+const { colors, fontSizes } = theme;
 
 const ExperienceContainer = styled.div`
   display: flex;
@@ -97,7 +97,7 @@ const Resume = styled.div`
           return (
             <Row>
               <div>
-                <Company><a href={url} target='_blank'>{company}</a></Company>
+                <Company><a href={url} target='_blank' rel="noopener noreferrer">{company}</a></Company>
                 <JobTitle>{title}</JobTitle>
               </div>
               <Range>{range}</Range>
