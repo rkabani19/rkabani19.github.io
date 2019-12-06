@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { theme, media } from '../styles';
 import Social from './social'
 
-const { colors, fonts, fontSizes } = theme;
+const { colors, fontSizes } = theme;
 
 const AboutContainer = styled.div`
   display: flex;

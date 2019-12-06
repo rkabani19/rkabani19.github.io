@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme, media } from '../styles';
 
-const { colors, fonts, fontSizes } = theme;
+const { colors, fontSizes } = theme;
 
 const BackgroundContainer = styled.div`
   display: flex;

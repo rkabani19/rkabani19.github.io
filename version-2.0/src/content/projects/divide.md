@@ -1,6 +1,7 @@
 ---
 order: 2
 title: 'Divide'
+link: 'https://github.com/rkabani19/divide-backend'
 tech: 
   - Android
   - Kotlin

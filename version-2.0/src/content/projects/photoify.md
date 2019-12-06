@@ -1,6 +1,7 @@
 ---
 order: 4
 title: 'Photoify'
+link: 'https://github.com/rkabani19/Photoify'
 tech: 
   - Android
   - Flutter API

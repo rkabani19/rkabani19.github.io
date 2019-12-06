@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { theme, media } from '../styles';
 
-const { colors, fonts, fontSizes } = theme;
+const { colors, fontSizes } = theme;
 
 const ProjectsContainer = styled.div`
   display: flex;
@@ -34,6 +34,16 @@ const Name = styled.div`
   font-size: ${fontSizes.large};
   font-weight: 600;
   letter-spacing: 0.07em;
+  width: 100%;
+  
+  a {
+    color: ${colors.darkGrey};
+    position: relative;
+
+    &:after {  
+      background: ${colors.darkGrey};
+    }
+  }
 `;
 
 const Tags = styled.div`
@@ -105,12 +115,12 @@ const ProjectLink = styled.div`
       <Header>projects.</Header>
       <Body>
         {data && data.map(({ node }) => {
-            const { title, tech } = node.frontmatter;
+            const { link, title, tech } = node.frontmatter;
             const { html } = node;
 
             return (
               <Row>
-                <Name>{title}</Name>
+                <Name><a href={link} target='_blank' rel="noopener noreferrer">{title}</a></Name>
                 <Description dangerouslySetInnerHTML={{ __html: html }}/>
                 <Tags>
                   {tech && tech.map((tag) =>
