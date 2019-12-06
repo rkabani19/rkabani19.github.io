@@ -87,7 +87,7 @@ const Row = styled.div`
 
 const pulse = keyframes`
   50%  {transform: scale(0.8);}
-`
+`;
 
 const ProjectLink = styled.div`
   margin: 40px 0;
