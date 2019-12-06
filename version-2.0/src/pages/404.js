@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import { theme, media } from '../styles';
 import Layout from "../components/layout";
 
-const { colors, fontSizes } = theme;
+const { colors } = theme;
 
 const Container = styled.div`
   display: flex;

@@ -117,7 +117,6 @@ export const query = graphql`
   }
 `;
 
-// TODO: customize 404 page
 // TODO: update background description
 // TODO: add resume
 // TODO: update metadata
