@@ -29,6 +29,7 @@ const Excerpt = styled.div`
   margin-top: 15px;
   color: ${colors.darkGrey};
   font-size: ${fontSizes.medium};
+  font-weight: 300;
 
   a {
     position: relative;
