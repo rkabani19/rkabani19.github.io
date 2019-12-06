@@ -28,26 +28,19 @@ const Name = styled.div`
   color: ${colors.whitish};
   line-height: 1.1;
   font-size: 100px;
-  ${media.desktop`font-size: 100px;`};
   ${media.tablet`font-size: 80px;`};
   ${media.phablet`font-size: 70px;`};
   ${media.phone`font-size: 60px;`};
 `;
 
 const Subtitle = styled.div`
-  margin-top: 25px;
+  margin: 25px 0 50px 0;
   line-height: 1.1;
   color: ${colors.slate};
   font-size: 30px;
-  ${media.desktop`font-size: 50px;`};
-  ${media.tablet`font-size: 40px;`};
-  ${media.phablet`font-size: 30px;`};
-  ${media.phone`font-size: 20px;`};
-`;
-
-const Excerpt = styled.div`
-  margin-top: 15px;
-  color: ${colors.slate};
+  ${media.tablet`font-size: 20px;`};
+  ${media.phablet`font-size: 15px;`};
+  ${media.phone`font-size: 15px;`};
 `;
 
  export default function About(props) {
@@ -58,8 +51,7 @@ const Excerpt = styled.div`
       <Hello>{data.frontmatter.title}</Hello>
       <Name>{data.frontmatter.name}</Name>
       <Subtitle>{data.frontmatter.subtitle}</Subtitle>
-      {/* <Excerpt dangerouslySetInnerHTML={{ __html: data.html }}/> */}
-      <Social/>
+      <Social />
     </AboutContainer>
   )
  };

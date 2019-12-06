@@ -8,10 +8,10 @@ const BackgroundContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 50px 50px 0 50px;
-  ${media.desktop`padding: 0 100px;`};
-  ${media.tablet`padding: 0 50px;`};
-  ${media.phablet`padding: 0 25px;`};
+  padding: 50px;
+  ${media.desktop`padding: 50px 100px;`};
+  ${media.tablet`padding: 50px 50px;`};
+  ${media.phablet`padding: 50px 25px;`};
 `;
 
 const Header = styled.div`
@@ -19,20 +19,23 @@ const Header = styled.div`
   line-height: 1.1;
   font-size: 30px;
   font-weight: 500;
-  ${media.desktop`font-size: 100px;`};
-  ${media.tablet`font-size: 80px;`};
-  ${media.phablet`font-size: 70px;`};
-  ${media.phone`font-size: 60px;`};
+  ${media.tablet`font-size: 30px;`};
+  ${media.phablet`font-size: 30px;`};
+  ${media.phone`font-size: 30px;`};
 `;
 
 const Excerpt = styled.div`
   padding-left: 25px;
   margin-top: 15px;
   color: ${colors.darkGrey};
-  font-size: ${fontSizes.large};
+  font-size: ${fontSizes.medium};
 
   a {
     position: relative;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 `;
 
