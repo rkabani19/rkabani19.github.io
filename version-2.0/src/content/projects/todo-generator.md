@@ -2,7 +2,7 @@
 order: 1
 title: 'TODO Generator CLI'
 tech: 
-  - Ruby on Rails
+  - Go
   - GraphQL
   - Github API
   - OptParse

@@ -8,7 +8,7 @@ const ExperienceContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 25px 50px 0 50px;
+  padding: 0px 50px 0 50px;
   ${media.desktop`padding: 0 100px;`};
   ${media.tablet`padding: 0 50px;`};
   ${media.phablet`padding: 0 25px;`};
@@ -19,10 +19,9 @@ const Header = styled.div`
   line-height: 1.1;
   font-size: 30px;
   font-weight: 500;
-  ${media.desktop`font-size: 100px;`};
-  ${media.tablet`font-size: 80px;`};
-  ${media.phablet`font-size: 70px;`};
-  ${media.phone`font-size: 60px;`};
+  ${media.tablet`font-size: 30px;`};
+  ${media.phablet`font-size: 30px;`};
+  ${media.phone`font-size: 30px;`};
 `;
 
 const Body = styled.div`
@@ -57,6 +56,11 @@ const Row = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 15px;
+
+  ${media.phablet`
+    display: flex;
+    flex-direction: column;
+  `};
 `;
 
 const pulse = keyframes`
@@ -64,8 +68,8 @@ const pulse = keyframes`
 `
 
 const Resume = styled.div`
-  padding-top: 30px;
   position: relative;
+  margin: 40px 0 50px 0;
 
   &:hover {
     cursor: pointer;
@@ -93,7 +97,7 @@ const Resume = styled.div`
           return (
             <Row>
               <div>
-                <Company><a href={url}>{company}</a></Company>
+                <Company><a href={url} target='_blank'>{company}</a></Company>
                 <JobTitle>{title}</JobTitle>
               </div>
               <Range>{range}</Range>

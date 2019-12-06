@@ -8,7 +8,7 @@ const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 50px 50px 0 50px;
+  padding: 0px 50px 0 50px;
   ${media.desktop`padding: 0 100px;`};
   ${media.tablet`padding: 0 50px;`};
   ${media.phablet`padding: 0 25px;`};
@@ -25,10 +25,9 @@ const Header = styled.div`
   line-height: 1.1;
   font-size: 30px;
   font-weight: 500;
-  ${media.desktop`font-size: 100px;`};
-  ${media.tablet`font-size: 80px;`};
-  ${media.phablet`font-size: 70px;`};
-  ${media.phone`font-size: 60px;`};
+  ${media.tablet`font-size: 30px;`};
+  ${media.phablet`font-size: 30px;`};
+  ${media.phone`font-size: 30px;`};
 `;
 
 const Name = styled.div`
@@ -39,6 +38,7 @@ const Name = styled.div`
 
 const Tags = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const Tag = styled.div`
@@ -79,7 +79,7 @@ const pulse = keyframes`
   50%  {transform: scale(0.8);}
 `
 
-const Resume = styled.div`
+const ProjectLink = styled.div`
   margin: 40px 0;
   position: relative;
 
@@ -120,7 +120,7 @@ const Resume = styled.div`
               </Row>
             );
         })}
-        <Resume onClick={()=> window.open("https://www.github.com/rkabani19")}>View more projects</Resume>
+        <ProjectLink onClick={()=> window.open("https://www.github.com/rkabani19")}>View more projects</ProjectLink>
       </Body>
     </ProjectsContainer>
   )

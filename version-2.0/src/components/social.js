@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import {CSSTransition, TransitionGroup} from 'react-transition-group';
-import {socialMedia} from '../config';
-import {IconGithub, IconLinkedin, IconFacebook, IconEmail} from './icons';
-import {theme} from '../styles';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { socialMedia } from '../config';
+import { IconGithub, IconLinkedin, IconFacebook, IconEmail } from './icons';
+import { media, theme } from '../styles';
 
 const {colors} = theme;
 
@@ -13,7 +13,14 @@ const SocialContainer = styled.div`
   bottom: 0;
   left: 40px;
   color: ${colors.bluish};
+
+  ${media.desktop`
+    position: inherit;
+    left: 0;
+    width: fit-content;
+  `};
 `;
+
 const SocialItemList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -26,12 +33,31 @@ const SocialItemList = styled.ul`
     margin: 0;
     background-color: ${colors.slate};
   }
+
+  ${media.desktop`
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      display: none;
+    }
+  `};
 `;
+
 const SocialItem = styled.li`
   &:last-of-type {
     margin-bottom: 20px;
   }
+
+  ${media.desktop`
+    margin: 0;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  `};
 `;
+
 const SocialLink = styled.a`
   padding: 10px;
   svg {
@@ -51,6 +77,22 @@ const SocialLink = styled.a`
       transform: scale(1.2);
     }
   }
+
+  ${media.desktop`
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+    padding: 0 50px 0 0;
+  `};
+
+  ${media.phablet`
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+    padding: 0 30px 0 0;
+  `};
 `;
 
 const SocialLine = () => {
