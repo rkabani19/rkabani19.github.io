@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import styled from 'styled-components';
-import { About, Background, Experience, Projects } from "../components";
+import { About, Background, Experience, Projects, HelmetHeader } from "../components";
 import { media } from '../styles';
 import { graphql } from 'gatsby';
 
@@ -44,6 +44,7 @@ const LeftContainer = styled.div`
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <HelmetHeader />
     <MainContainer>
       <LeftContainer>
         <About data={data.about.edges} />
