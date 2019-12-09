@@ -118,6 +118,4 @@ export const query = graphql`
   }
 `;
 
-// TODO: update background description
 // TODO: add resume
-// TODO: update metadata
