@@ -7,7 +7,7 @@ export default function HelmetHeader() {
       <meta charset="utf-8" />
       <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-      <title>Rohail Kabani | Software and Computer Engineer</title>
+      <title>Rohail Kabani | Software Engineer</title>
       <link rel="icon" href="src/images/logo.png" />
       <meta name="description" content="Detail-orientated student passionate about exploring the realm of software development." />
       <meta name="keywords" content="development, engineer, developer, software, software engineer, rohail, kabani, waterloo, javascript, ruby on rails, java, backend, graphql, api, go, github" />
