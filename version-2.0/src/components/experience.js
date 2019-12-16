@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
+import resume from '../images/resume.pdf';
 import { theme, media } from '../styles';
 
 const { colors, fontSizes } = theme;
@@ -104,7 +105,7 @@ const Resume = styled.div`
             </Row>
           )
         })}
-        <Resume onClick={()=> window.open("/resume.pdf")}>View my resume</Resume>
+        <Resume onClick={()=> window.open(resume)}>View my resume</Resume>
       </Body>
     </ExperienceContainer>
   )
