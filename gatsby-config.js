@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/rkabani19.github.io",
   siteMetadata: {
     title: `Rohail Kabani | Software Engineer`,
     description: `Rohail Kabani is a software engineer who loves developing software that makes an impact.`,
