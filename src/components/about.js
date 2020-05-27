@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { theme, media } from '../styles';
 import Social from './social'
 
@@ -33,6 +33,10 @@ const Name = styled.div`
   ${media.phone`font-size: 60px;`};
 `;
 
+const pulse = keyframes`
+  50%  {transform: scale(0.8);}
+`;
+
 const Subtitle = styled.div`
   margin: 25px 0 50px 0;
   line-height: 1.1;
@@ -41,6 +45,20 @@ const Subtitle = styled.div`
   ${media.tablet`font-size: 20px;`};
   ${media.phablet`font-size: 15px;`};
   ${media.phone`font-size: 15px;`};
+
+  &:hover {
+    cursor: pointer;
+    &:after {
+      transition: all .2s ease-in-out;
+      animation: ${pulse} 0.7s ease-in infinite;
+    }
+  }
+
+  &:after {
+    display: inline-block;
+    padding-left: 10px;
+    content: '🚀';
+  }
 `;
 
  export default function About(props) {
