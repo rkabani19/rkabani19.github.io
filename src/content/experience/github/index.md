@@ -1,6 +1,6 @@
 ---
 date: "2020-08-28"
-title: 'Software Engineer Intern'
+title: 'Software Engineer Intern, Backend'
 company: 'GitHub'
 location: 'San Francisco, CA'
 range: 'June - Sept 2020'

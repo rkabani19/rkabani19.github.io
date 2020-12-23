@@ -1,13 +1,12 @@
 ---
 order: 4
-title: 'Photoify'
-link: 'https://github.com/rkabani19/Photoify'
-tech: 
-  - Android
-  - Flutter API
-  - REST
-  - Material
-  - Async
+title: 'Internship Assistant'
+link: 'https://github.com/rkabani19/internship-assistant'
+tech:
+  - Go
+  - Cobra
+  - Web Scraping
+  - Conccurrency
 ---
 
-A small Android app that allows you to search, view, and comment on images.
+A Go CLI to scrape the web for internships at target companies, and notify user when posted.
