@@ -1,12 +1,12 @@
 ---
 order: 1
-title: 'TODO Generator CLI'
-link: 'https://github.com/rkabani19/todo-to-issue-generator'
+title: 'Tissue'
+link: 'https://github.com/rkabani19/tissue'
 tech:
   - Go
-  - GraphQL
+  - Concurrency
   - Github API
   - Cobra
 ---
 
-A command line interface (CLI) for converting TODO's in your repositories to Github issue, so you can better organize what has to be done.
+A command line interface for converting TODO's in your repositories to Github issue, so you can better organize what has to be done.

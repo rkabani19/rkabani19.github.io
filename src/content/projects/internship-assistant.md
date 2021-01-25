@@ -6,7 +6,6 @@ tech:
   - Go
   - Cobra
   - Web Scraping
-  - Conccurrency
 ---
 
-A Go CLI to scrape the web for internships at target companies, and notify user when posted.
+A CLI to scrape the web for internships at target companies, and notify user when posted.
